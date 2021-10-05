@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Deep Patel | File Server Project</title>
+    <link rel="icon" href="img/dp_logo.png" type="image/x-icon">
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="ionicons/css/ionicons.min.css" rel="stylesheet">
+
+    <!-- main css -->
+    <link href="css/stylefs.css" rel="stylesheet">
+
+
+    <!-- modernizr -->
+    <script src="js/modernizr.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="pre-container">
+            <div class="spinner">
+                <div class="double-bounce1"></div>
+                <div class="double-bounce2"></div>
+            </div>
+        </div>
+    </div>
+    <!-- end Preloader -->
+
+    <div class="container-fluid">
+       <!-- box-header -->
+        <header class="box-header">
+            <div class="box-logo">
+                <a href="index.htm"><img src="img/dp_logo.png" width="80" alt="Logo"></a>
+            </div>
+            <!-- box-nav -->
+            <a class="box-primary-nav-trigger" href="#0">
+                <span class="box-menu-text">Menu</span><span class="box-menu-icon"></span>
+            </a>
+            <!-- box-primary-nav-trigger -->
+        </header>
+        <!-- end box-header -->
+        
+        <!-- nav -->
+        <nav>
+            <ul class="box-primary-nav">
+                <li class="box-label">About me</li>
+
+                <li><a href="index.htm">Intro</a></li>
+                <li><a href="about.html">About me</a></li>
+                <li><a href="portfolio.html">portfolio</a> <i class="ion-ios-circle-filled color"></i></li>
+                <li><a href="Deep_Patel_Resume.pdf" target="_blank">resume</a></li>
+                <li><a href="contact.html">contact me</a></li>
+
+
+
+                <li class="box-label">Follow me</li>
+
+                <li class="box-social"><a href="#0"><i class="ion-social-facebook"></i></a></li>
+                <li class="box-social"><a href="#0"><i class="ion-social-instagram-outline"></i></a></li>
+                <li class="box-social"><a href="#0"><i class="ion-social-twitter"></i></a></li>
+                <li class="box-social"><a href="#0"><i class="ion-social-dribbble"></i></a></li>
+            </ul>
+        </nav>
+        <!-- end nav -->
+    </div>
+    
+    <!-- top-bar -->
+    <div class="top-bar">
+        <h1>Remote File Server</h1>
+        <p><a href="index.htm">Home</a> / <a href="portfolio.html">portfolio</a> / Remote File Server </p>
+    </div>
+    <!-- end top-bar -->
+    
+    <!-- main-container -->
+    <div class="container main-container">
+
+        <div class="col-md-12">
+            <h3 class="text-uppercase">Remote File Server</h3>
+            <h5>Using socket programming to design file server architecture and interface</h5>
+            <div class="h-30"></div>
+        </div>
+
+        <div class="col-md-9">
+
+			<p> In this project, I used socket programming to design a remote file server interface in which a client can 
+			open, read, write, and close files. With the use of kernel threads, the file server allows for multiple clients to connect
+			to the server simultaneously and given different permissions, can open, read, write, and close files based on three modes of file
+			connections:<br /><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1) unrestricted mode: anyone can have the file open in read or write mode, <br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(2) exclusive mode: anyone have the file open in read mode but at most one can have it open in write mode, and <br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(3) transaction mode: only one distinct client can have the file open for any reason.<br /><br />
+			The interface involves coding of a client side application and a server side
+			application which can respond to client requests. Further enhancements to the interface I would have implemented, if time had permitted, 
+			include a queue for client threads waiting for a particular file so that most important actions are taken in a logical order. Also, I would
+			implement a monitor thread in order to keep from holding up open queued connections forever.
+			</p><br />
+			
+			<p>Feel free to download the project on 
+                <a href="https://github.com/deeppatel96/C/tree/master/Systems%20Programming/Socket%20Programming/Asst3" target="_blank">GitHub</a>
+             and try it out yourself</p><br /><br />
+
+
+
+
+        </div>
+
+        <div class="col-md-3">
+            <ul class="cat-ul">
+                <li><i class="ion-ios-circle-filled"></i> Socket programming</li>
+                <li><i class="ion-ios-circle-filled"></i> Kernel Threads</li>
+                <li><i class="ion-ios-circle-filled"></i> File Server</li>
+                <li><i class="ion-ios-circle-filled"></i> C</li>
+            </ul>
+            <div class="h-10"></div>
+            <h4>Share</h4>
+            <ul class="social-ul">
+                <li class="box-social"><a href="#0"><i class="ion-social-facebook"></i></a></li>
+                <li class="box-social"><a href="#0"><i class="ion-social-instagram-outline"></i></a></li>
+                <li class="box-social"><a href="#0"><i class="ion-social-twitter"></i></a></li>
+                <li class="box-social"><a href="#0"><i class="ion-social-dribbble"></i></a></li>
+            </ul>
+        </div>
+
+        <div class="col-md-12">
+            <img src="img/socket.jpg" alt="" class="img-responsive" />
+            <div class="h-30"></div>
+        </div>
+
+    </div>
+    <!-- end main-container -->
+
+
+    <!-- footer -->
+    <footer>
+        <div class="container-fluid">
+            <p class="copyright">© Deep Patel 2019</p>
+        </div>
+    </footer>
+    <!-- end footer -->
+    
+    <!-- back to top -->
+    <a href="#0" class="cd-top"><i class="ion-android-arrow-up"></i></a>
+    <!-- end back to top -->
+
+
+
+
+    <!-- jQuery -->
+    <script src="js/jquery-2.1.1.js"></script>
+    <!--  plugins -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/animated-headline.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+
+
+    <!--  custom script -->
+    <script src="js/custom.js"></script>
+
+</body>
+
+</html>

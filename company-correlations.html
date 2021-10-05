@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Deep Patel | S&P 500 Company Correlations</title>
+    <link rel="icon" href="img/dp_logo.png" type="image/x-icon">
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="ionicons/css/ionicons.min.css" rel="stylesheet">
+
+    <!-- main css -->
+    <link href="css/stylecc.css" rel="stylesheet">
+
+
+    <!-- modernizr -->
+    <script src="js/modernizr.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="pre-container">
+            <div class="spinner">
+                <div class="double-bounce1"></div>
+                <div class="double-bounce2"></div>
+            </div>
+        </div>
+    </div>
+    <!-- end Preloader -->
+
+    <div class="container-fluid">
+       <!-- box-header -->
+        <header class="box-header">
+            <div class="box-logo">
+                <a href="index.htm"><img src="img/dp_logo.png" width="80" alt="Logo"></a>
+            </div>
+            <!-- box-nav -->
+            <a class="box-primary-nav-trigger" href="#0">
+                <span class="box-menu-text">Menu</span><span class="box-menu-icon"></span>
+            </a>
+            <!-- box-primary-nav-trigger -->
+        </header>
+        <!-- end box-header -->
+        
+        <!-- nav -->
+        <nav>
+            <ul class="box-primary-nav">
+                <li class="box-label">About me</li>
+
+                <li><a href="index.htm">Intro</a></li>
+                <li><a href="about.html">About me</a></li>
+                <li><a href="portfolio.html">portfolio</a> <i class="ion-ios-circle-filled color"></i></li>
+                <li><a href="Deep_Patel_Resume.pdf" target="_blank">resume</a></li>
+                <li><a href="contact.html">contact me</a></li>
+
+
+
+                <li class="box-label">Follow me</li>
+
+                <li class="box-social"><a href="#0"><i class="ion-social-facebook"></i></a></li>
+                <li class="box-social"><a href="#0"><i class="ion-social-instagram-outline"></i></a></li>
+                <li class="box-social"><a href="#0"><i class="ion-social-twitter"></i></a></li>
+                <li class="box-social"><a href="#0"><i class="ion-social-dribbble"></i></a></li>
+            </ul>
+        </nav>
+        <!-- end nav -->
+    </div>
+    
+    <!-- top-bar -->
+    <div class="top-bar">
+        <h1>S&P 500 Company Correlations</h1>
+        <p><a href="index.htm">Home</a> / <a href="portfolio.html">portfolio</a> / S&P 500 Company Correlations </p>
+    </div>
+    <!-- end top-bar -->
+    
+    <!-- main-container -->
+    <div class="container main-container">
+
+        <div class="col-md-12">
+            <h3 class="text-uppercase">S&P 500 Company Correlations</h3>
+            <h5>Using Natural Language Processing to Generate Correlations Between Company Stock Prices</h5>
+            <div class="h-15"></div>
+        </div>
+
+        <div class="col-md-9">
+
+			<p> &emsp;&emsp;This project was part of a many-school competition called QuantQuest hosted by the Goldman Sachs Quantitative Investment Strategies Divison in which I placed in 2nd place out of teams from universities like Columbia, Princeton, MIT, NYU Stern, and Yale. It involved a simple open-ended task using a complex solution using a natural language processing method. The specific task was to create a dynamic (not hard-coded) program which outputs a link matrix of nonnegative correlations between all S&amp;P 500 companies to each other and uses only data found on Wikipedia and any natural language processing method of your choice. To understand the problem, I found all the available data on Wikipedia on the S&amp;P 500 companies and also saw that the given table of S&amp;P 500 companies on Wikipedia included hyperlinks on the majority of company names which led to the company's Wikipedia page. This led me to realize that I could leverage this data by scraping the hyperlinks and using the company pages to perform some sort of natural language processing to compare the pages of 2 different companies, roughly 500x500 times to get all the links of the matrix. For the companies without Wikipedia pages I based the comparison of the companies on the information on sector, subindustry, and company size with unsymmetric weights between the 3. This information was readily available for in the Wikipedia table of the <a href="https://en.wikipedia.org/wiki/List_of_S%26P_500_companies" target="_blank">list of S&amp;P 500 companies.</a><br />
+            &emsp;&emsp;Now, for the more exciting, most interesting part of the project, I was to find and choose a natural language processing algorithm that would effectively correlate information about one company to another to accurately capture any potential correlations in the companys' stock prices. Researching what was out there, I found n-grams, Latent Semantic Indexing (LSI), and Latent Dirichlet Allocation (LDA) to be the most highly effective natural language processing algorithms. From these, I chose to use Latent Semantic Indexing because it reduces the probability of finding false similarities that n-grams has a propensity for and does not require a huge corpus (an extensive dictionary of topic modeling training data) which takes an immense amount of computing power to contribute an accurate result. The technical model of LSI is shown in the figures below and a deeper understanding of my implementation can be obtained from my <a href="QuantQuest.pdf" target="_blank">Presentation</a>. To see the whole program with a sample result can be found on <a href="https://github.com/deeppatel96/Python/tree/master/Goldman_Sachs_Project/src" target="_blank">GitHub</a>.
+            <br /> <br />
+            
+            <b>Tools Used:</b> <br />
+            Python <br />
+            BeautifulSoup &amp; urllib2 (for web scraping) <br />
+            NumPy, SciPy, &amp; MatPlotLib (to handle, manipulate, and store the data) <br />
+            Gensim &amp; NLTK (for machine learning model) <br />
+
+        </div>
+
+        <div class="col-md-3">
+            <ul class="cat-ul">
+                <li><i class="ion-ios-circle-filled"></i> NLP</li>
+                <li><i class="ion-ios-circle-filled"></i> Python</li>
+                <li><i class="ion-ios-circle-filled"></i> Stock Prices</li>
+                <li><i class="ion-ios-circle-filled"></i> Latent Dirichlet Allocation</li>
+            </ul>
+            <div class="h-10"></div>
+            <h4>Share</h4>
+            <ul class="social-ul">
+                <li class="box-social"><a href="#0"><i class="ion-social-facebook"></i></a></li>
+                <li class="box-social"><a href="#0"><i class="ion-social-instagram-outline"></i></a></li>
+                <li class="box-social"><a href="#0"><i class="ion-social-twitter"></i></a></li>
+                <li class="box-social"><a href="#0"><i class="ion-social-dribbble"></i></a></li>
+            </ul>
+        </div>
+
+
+        <div class="col-md-12">
+            <img src="img/lsimodel.jpg" alt="" class="img-responsive" />
+            <img src="img/lsi.jpg" alt="" class="img-responsive" />
+            <div class="h-30"></div>
+        </div>
+
+    </div>
+    <!-- end main-container -->
+
+
+    <!-- footer -->
+    <footer>
+        <div class="container-fluid">
+            <p class="copyright">© Deep Patel 2019</p>
+        </div>
+    </footer>
+    <!-- end footer -->
+    
+    <!-- back to top -->
+    <a href="#0" class="cd-top"><i class="ion-android-arrow-up"></i></a>
+    <!-- end back to top -->
+
+
+
+
+    <!-- jQuery -->
+    <script src="js/jquery-2.1.1.js"></script>
+    <!--  plugins -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/animated-headline.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+
+
+    <!--  custom script -->
+    <script src="js/custom.js"></script>
+
+</body>
+
+</html>
